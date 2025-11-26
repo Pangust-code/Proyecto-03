@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "baseHref": "https://github.com/Pangust-code/Proyecto-03",
+            "baseHref": "/Proyecto-03/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
