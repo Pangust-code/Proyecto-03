@@ -1,0 +1,25 @@
+<section class="p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
+    <h2 class="text-2xl font-bold mb-4">Barra de progreso interactiva</h2>
+
+    <input
+        type="range"
+        min="0"
+        max="100"
+        class="w-80 m-4 accent-blue-600"
+        (input)="actualizarProgreso($event)"
+    >
+
+    <div class="relative w-80 h-6 bg-gray-200 rounded-full overflow-hidden shadow-inner">
+        <div
+            class="h-full transition-all duration-500"
+            [style.width.%]="progreso()"
+            [class]="progreso() >= 50 ? 'bg-green-500' : 'bg-blue-600'"
+            
+
+        ></div>
+    </div>
+
+    <p class="">
+        Progreso: {{ progreso() }}%
+    </p>
+</section>
