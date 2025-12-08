@@ -60,14 +60,11 @@ export class SimpsonsPage {
   /// VERSIUON CON RXRESOURCE
   simpsonsResource = rxResource({
     params: () => ({
-      page: this.paginationService.currentPage() - 1,
-      limit: this.charactersPerPage(),
+      page: this.paginationService.currentPage(),
     }),
     stream: ({ params }) => {
-      return this.simpsonsService.getCharactersOptions({
-        offset: params.page,
-        limit: params.limit,
-      });
+      const page = Math.max(1, params.page ?? 1);
+      return this.simpsonsService.getCharacters(page);
     },
   });
 }

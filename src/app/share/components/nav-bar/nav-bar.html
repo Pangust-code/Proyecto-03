@@ -10,12 +10,18 @@
           </svg>
         </label>
       </div>
-      <div class="mx-2 flex-1 px-2 font-bold">Daniel Guanga</div>
+      <div class="mx-2 flex-1 ">
+        <div class="flex justify-start">
+          <a routerLink="/login" class="btn btn-primary">
+            Iniciar Sesión
+          </a>
+        </div>
+      </div>
       <div class="hidden flex-none lg:block">
         <ul class="menu menu-horizontal">
           <li><a routerLink="/estilos" routerLinkActive="bg-primary text-primary-content">Estilos</a></li>
           <li><a routerLink="/simpsons" routerLinkActive="bg-primary text-primary-content">Simpsons</a></li>
-          <li><a routerLink="/" routerLinkActive="bg-primary text-primary-content"
+          <li><a routerLink="/home" routerLinkActive="bg-primary text-primary-content"
               [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
         </ul>
         <!-- Theme switcher al pie del menú -->

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hero-simpsons',
@@ -7,6 +7,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroSimpsons {
-  simpsonsCount = input.required<number>();
-  totalPages = input.required<number>();
+  @Input() simpsonsCount: number = 0;
+  @Input() totalPages: number = 0;
 }

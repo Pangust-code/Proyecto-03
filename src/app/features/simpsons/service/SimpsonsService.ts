@@ -11,6 +11,9 @@ import { Options } from '../interface/Options';
 @Injectable({ providedIn: 'root' })
 export class SimpsonsService {
   getCharactersOptions(options: Options): Observable<SimpsonsResponse> {
+    // Log the requested options for debugging pagination issues
+    console.debug('[SimpsonsService] getCharactersOptions called with', options);
+
     return this.http
       .get<SimpsonsResponse>(
         `${this.API_URL}/characters?offset=${options.offset}&limit=${options.limit}`
@@ -29,6 +32,7 @@ export class SimpsonsService {
   private readonly API_URL = environment.apiUrl;
 
   getCharacters(page: number = 1): Observable<SimpsonsResponse> {
+    console.debug('[SimpsonsService] getCharacters called with page', page);
     return this.http.get<SimpsonsResponse>(`${this.API_URL}/characters?page=${page}`).pipe(
       map(res => res),
       catchError(err => {

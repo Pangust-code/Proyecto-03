@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breadcumbs',
@@ -7,5 +7,5 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Breadcumbs {
-    items = input<{ label: string; link?: string }[]>([]);
+  @Input() items: { label: string; link?: string }[] = [];
 }
