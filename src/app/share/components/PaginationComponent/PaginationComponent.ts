@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, Input, inject, signal, effect } from '@angular/core';
 import { Router } from '@angular/router';
-import { PaginationService } from '../../../../app/features/service/PaginationService';
+import { PaginationService } from '../../../feature/Simpsons/Service/PaginationService';
 
 @Component({
   selector: 'app-pagination-component',

@@ -1,16 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavBar } from "./share/components/nav-bar/nav-bar";
-import { Footer } from "./share/components/Footer/Footer";
-import { BackToTop } from "./share/components/BackToTop/BackToTop";
+import { Drawer } from "./feature/daisy-page/Component/Drawer/Drawer";
+import { FooterPage } from "./feature/daisy-page/Component/footer-page/footer-page";
+import { BackToTop } from "./feature/share/componet/back-to-top/back-to-top";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBar, Footer, BackToTop],
+  imports: [RouterOutlet, Drawer, FooterPage, BackToTop],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('proyecto-03');
+  protected readonly title = signal('03-ui-componentes-estilos');
 }
-
